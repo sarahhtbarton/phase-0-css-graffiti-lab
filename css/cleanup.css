@@ -1,1 +1,37 @@
 /* write your override styles here */
+
+/*
+How to measure specificity
++ 1,000 for style attribute (style = "")
++   100 for ID (.id)
++    10 for class, attribute (#class)([attribute=something])
++     1 for element / selector (ex: p, h1, div, etc)
+*/
+
+#wall .tag-1 {
+    display: none;
+}
+
+div#wall #tag-2 {
+    display: none;
+}
+
+div#wall #tag-3.slick.wicked {
+    display: none;
+}
+
+div#wall #tag-4 {
+    display: none;
+}
+
+div#wall div.parent #tag-5.slick {
+    display: none;
+}
+
+div#wall div.parent div+div:last-child div#tag-6 {
+    display: none;
+}
+
+body div#wall div.parent div>#tag-7.slick {
+    display: none;
+}
